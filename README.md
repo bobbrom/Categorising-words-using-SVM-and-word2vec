@@ -14,7 +14,7 @@ For further reading please read 'Efficient Estimation of Word Representations in
 
 This project uses a pre-trained model that in comprised of the Google News dataset. 
 
-<u>As this file is too big to add to the repository a version must be downloaded then added to the root of the folder.</u>
+<u>As this file is too big to add to the repository a version must be downloaded then added to the root of the folder.</u>   
 <u>It can be downloaded here:</u>
 
 https://figshare.com/articles/dataset/GoogleNews-vectors-negative300_bin/6007688/1
