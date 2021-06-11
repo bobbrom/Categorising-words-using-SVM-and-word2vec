@@ -1,3 +1,6 @@
+# The words used in this example is taken directly from 'Efficient Estimation of Word Representations in
+# Vector Space' by Mikolov et al.
+
 from sklearn.decomposition import PCA
 import gensim.models.keyedvectors as word2vec
 from matplotlib import pyplot
@@ -32,11 +35,12 @@ def createPCA(model, labelSets,groups="a"):
         i += 1
     pyplot.show()
 
+
 model = word2vec.KeyedVectors.load_word2vec_format("GoogleNews-vectors-negative300.bin", binary=True)
 print("Model Loaded")
 words = [["man","woman","king","queen","gentleman","lady"]]
 
+createPCA(model, words)
 
-#createPCA(model, words)
 print("King:")
 print(model.get_vector("king"))
