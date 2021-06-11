@@ -5,6 +5,7 @@ import pickle
 import time
 
 wv = word2vec.KeyedVectors.load_word2vec_format("GoogleNews-vectors-negative300.bin", binary=True)
+print("Model Loaded")
 files = glob.glob("testing/*.txt")
 
 
