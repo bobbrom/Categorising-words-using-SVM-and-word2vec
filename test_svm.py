@@ -12,11 +12,14 @@ results = dict()
 
 catagories = [f.split("\\")[-1].replace(".txt","") for f in files]
 for cat in catagories:
+    print(cat)
+
     TP = 0
     FP = 0
     TN = 0
     FN = 0
-    clf = pickle.load(open(("svm_models/"+cat+".svm", "rb"))
+
+    clf = pickle.load(open("svm_models/"+cat+".svm", "rb"))
     for file in files:
         if 'testing\\'+cat+'.txt' == file:
             label = cat
@@ -29,12 +32,11 @@ for cat in catagories:
         oldPerc = -1
         oldT = time.time()
 
-
         for word in words:
             try:
                 p = clf.predict([wv.get_vector(word)])
-            except:
-                a = 1
+            except Exception as e:
+                continue
             if(label == cat):
                 if(p == label):
                     TP += 1
@@ -46,12 +48,12 @@ for cat in catagories:
                 else:
                     FN += 1
 
-            perc = int((100 / len(words)) * i)
-            if (perc != oldPerc):
-                t = time.time()
-                print(str(perc) + "%", "-", str(t - oldT), "ETA:", str((t - oldT) * (100 - perc)))
-                oldT = t
-                oldPerc = perc
+            # perc = int((100 / len(words)) * i)
+            # if (perc != oldPerc):
+            #     t = time.time()
+            #     print(str(perc) + "%", "-", str(t - oldT), "ETA:", str((t - oldT) * (100 - perc)))
+            #     oldT = t
+            #     oldPerc = perc
             i += 1
     d = dict()
     d["TP"] = TP
