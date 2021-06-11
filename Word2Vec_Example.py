@@ -37,6 +37,6 @@ print("Model Loaded")
 words = [["man","woman","king","queen","gentleman","lady"]]
 
 
-createPCA(model, words)
-
-print(m)
+#createPCA(model, words)
+print("King:")
+print(model.get_vector("king"))
