@@ -10,6 +10,8 @@ Word2Vec is a model for creating such word embeddings. Here words are turned int
 
 This is done via two algorithms the first being the Continuous Bag Of Words (CBOW) named as the order of the words itself does not matter which takes the surrounding words and tries to predict the word itself using a shallow neural network. The second can be seen as the inverse of this and is called the Skip-Gram model. Here the neural network attempts to calculate the context words given a centre word. 
 
+For further reading please read 'Efficient Estimation of Word Representations in Vector Space' by Mikolov et al. that can be found [here](https://arxiv.org/pdf/1301.3781.pdf%C3%AC%E2%80%94%20%C3%AC%E2%80%9E%C5%93).
+
 This project uses a pre-trained model that in comprised of the Google News dataset. 
 
 <u>As this file is too big to add to the repository it can be downloaded here:</u>
