@@ -8,10 +8,7 @@ wv = word2vec.KeyedVectors.load_word2vec_format("GoogleNews-vectors-negative300.
 
 files = glob.glob("training/*.txt")
 
-
-
 catagories = [f.split("\\")[-1].replace(".txt","") for f in files]
-
 
 print(catagories)
 for cat in catagories:
