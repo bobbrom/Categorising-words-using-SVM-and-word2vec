@@ -2,7 +2,7 @@
 
 This project shows how a Support Vector Machine can be used to tell if a word is a noun, verb, adverb or adjective.
 
-While this has little to no practical use it is a great demonstration of how word2vec works as it creates vectors out of words based on their place within a sentence then it makes sense that these categories would be clustered together within a Word2Vec model. If so then clusters should be able to be found using a simple linear Support Vector Machine.
+While this has little to no practical use it is a great demonstration of how Word2VSec works as it creates vectors out of words based on their place within a sentence then it makes sense that these categories would be clustered together within a Word2Vec Model. If so then clusters should be able to be found using a simple linear Support Vector Machine.
 
 ### A brief summary of Word2Vec
 
